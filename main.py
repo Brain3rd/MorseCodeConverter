@@ -22,12 +22,14 @@ def main():
     while True:
         user_input = input("What message do you want to convert?")
         input_words = list(user_input.upper())
-        for morse_code in input_words:
-            if morse_code in MORSE_CODE_DICT:
-                word_list.append(morse_code)
-                morse_code_list.append(MORSE_CODE_DICT[morse_code])
+        for letter in input_words:
+            if letter == ' ':
+                pass
+            elif letter in MORSE_CODE_DICT:
+                word_list.append(letter)
+                morse_code_list.append(MORSE_CODE_DICT[letter])
             else:
-                print(f"{morse_code} is invalid morse code character!")
+                print(f"{letter} is invalid morse code character!")
 
         final_word = '  '.join(word_list)
         final_morse_code = '  '.join(morse_code_list)
