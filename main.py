@@ -34,7 +34,7 @@ def main():
         final_word = '  '.join(word_list)
         final_morse_code = '  '.join(morse_code_list)
         print(f"Your word: {user_input}")
-        print(f"Valid letters from your word: {final_word}\nTranslated to the morse code: {final_morse_code}\n")
+        print(f"Valid letters from your word: {final_word}\nTranslated to morse code: {final_morse_code}\n")
         if input("Do you want to translate another word into morse code? Type 'y' or 'n':").upper() == 'N':
             break
         else:
